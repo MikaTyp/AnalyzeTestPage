@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body>
+  <body style="background-color: #FFD9D9;">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -58,11 +58,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/v1.loader.js";
+      var loaderUrl = buildUrl + "/v2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/v1.data",
-        frameworkUrl: buildUrl + "/v1.framework.js",
-        codeUrl: buildUrl + "/v1.wasm",
+        dataUrl: buildUrl + "/v2.data",
+        frameworkUrl: buildUrl + "/v2.framework.js",
+        codeUrl: buildUrl + "/v2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "CloydKayakLabs",
         productName: "AnalyzePrototype",
@@ -102,9 +102,8 @@
 
         }).then((unityInstance) => {
           myGameInstance = unityInstance;
-
           //Here you write the TEXT for the TEST. Dont use Return and be careful so that there is now double Spaces.
-          unityInstance.SendMessage('JavascriptObject', 'SetAssigmentText', 'for wham chad had pasha what gator hang ham hat or shark has skate orbs aorta chord halo charm shake khan alpha sord odor norm aloha afore for wham chad had pasha what gator hang ham hat or shark has skate orbs aorta chord halo charm shake khan alpha sord odor norm aloha afore for wham chad had pasha what gator hang ham hat or shark has skate orbs aorta chord halo charm shake khan alpha sord odor norm aloha afore');
+          unityInstance.SendMessage('JavascriptObject', 'SetAssigmentText', 'for wham chad had pasha what gator hang ham hat or shark has skate orbs aorta chord halo charm shake khan alpha sord odor norm aloha afore');
           //Here you set Chunks for the test. Recomended maximum amount of chunks is 4.
           //Dont use Spaces and differentiate chunks with differentiate comma (,)
           unityInstance.SendMessage('JavascriptObject', 'SetChunks', 'ad,te');
